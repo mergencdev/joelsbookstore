@@ -36,6 +36,8 @@ class ListFragment :
 
         db = AppDatabase.getInstance(requireContext())
 
+        initListeners()
+
         collectPageState(viewModel.pageStateFlow) { pageState ->
             when (pageState.pageState) {
                 ListViewModel.PageEvent.INITIAL -> {
@@ -46,6 +48,13 @@ class ListFragment :
                     onListResponseReceived(pageState.homePageApiState)
                 }
             }
+        }
+    }
+
+    private fun initListeners() {
+        binding.fabFavorites.setOnClickListener {
+            val action = ListFragmentDirections.actionListFragmentToFavoritesFragment()
+            findNavController().navigate(action)
         }
     }
 

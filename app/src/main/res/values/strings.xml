@@ -4,4 +4,5 @@
     <string name="rank">Rank:</string>
     <string name="description">Description:</string>
     <string name="publisher">Publisher:</string>
+    <string name="favorites">Favorites</string>
 </resources>
