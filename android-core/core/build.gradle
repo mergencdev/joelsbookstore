@@ -25,13 +25,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "Boolean", "DEBUG_MODE", "false"
-            buildConfigField("String", "BASE_URL", "\"https://api.nytimes.com/svc/books/v3\"")
-
+            buildConfigField("String", "BASE_URL", "\"https://api.nytimes.com/svc/books/v3/\"")
+            buildConfigField("String", "API_KEY", "\"rIWrGWEQGxwPCKKas4FdScA7S8PhRAN7\"")
         }
 
-        debug{
+        debug {
             buildConfigField "Boolean", "DEBUG_MODE", "true"
-            buildConfigField("String", "BASE_URL", "\"https://api.nytimes.com/svc/books/v3\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.nytimes.com/svc/books/v3/\"")
+            buildConfigField("String", "API_KEY", "\"rIWrGWEQGxwPCKKas4FdScA7S8PhRAN7\"")
         }
     }
 
